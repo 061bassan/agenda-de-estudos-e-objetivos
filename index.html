@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDash - Seu Painel</title>
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Ícones) - Certifique-se que este link está correto e funcionando -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Nosso CSS - Certifique-se que o nome e caminho estão corretos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Wrapper principal para controle de layout (empurrar footer) -->
+    <div class="page-wrapper">
+
+        <!-- Container principal que centraliza o conteúdo -->
+        <main class="dashboard-container">
+
+            <!-- Grid que contém os widgets -->
+            <div class="widgets-grid">
+
+                <!-- Widget: Relógio e Data -->
+                <div class="widget widget-time" id="widget-time">
+                    <time id="time-display" class="time-large">--:--:--</time>
+                    <time id="date-display" class="date-small">Carregando data...</time>
+                </div>
+
+                <!-- Widget: Saudação -->
+                <div class="widget widget-greeting" id="widget-greeting">
+                     <!-- O JS vai inserir o H2 aqui com o ícone -->
+                     <h2 id="greeting-text" style="display: none;"></h2>
+                    <input type="text" id="name-input" placeholder="Seu nome aqui" autocomplete="name">
+                </div>
+
+                <!-- Widget: Objetivos -->
+                <div class="widget widget-objectives" id="widget-objectives">
+                    <h3><i class="fas fa-bullseye"></i> Objetivos de Hoje:</h3>
+                    <ul id="objectives-list" class="objectives-list-area">
+                        <!-- Objetivos (<li>) serão inseridos aqui pelo JavaScript -->
+                        <li class="no-objectives-msg" style="display: none;">Nenhum objetivo definido ainda. Adicione um abaixo!</li>
+                    </ul>
+                    <div class="add-objective-area">
+                        <input type="text" id="new-objective-input" placeholder="Adicionar novo objetivo...">
+                        <button id="add-objective-btn" aria-label="Adicionar Objetivo"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Widget: Citação -->
+                <div class="widget widget-quote" id="widget-quote">
+                     <h3><i class="fas fa-quote-left"></i> Inspiração</h3>
+                    <blockquote id="quote-text">"Carregando inspiração..."</blockquote>
+                    <cite id="quote-author"></cite>
+                 </div>
+
+                 <!-- Adicione outros widgets aqui se necessário -->
+
+            </div> <!-- Fim .widgets-grid -->
+
+        </main> <!-- Fim .dashboard-container -->
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <span>Desenvolvido por: Bassan</span>
+            <div class="footer-links">
+                 <!-- !! IMPORTANTE: Substitua # pelos seus links reais !! -->
+                <a href="https://github.com/061bassan" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub" title="GitHub">
+                    <i class="fab fa-github"></i> <!-- Ícone GitHub -->
+                </a>
+            </div>
+        </footer>
+
+    </div> <!-- Fim .page-wrapper -->
+
+    <!-- Script JS no final -->
+    <script src="script.js"></script>
+</body>
+</html>
